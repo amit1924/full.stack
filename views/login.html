@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login Page</title>
+    <link rel="stylesheet" type="text/css" href="/styles.css" />
+  </head>
+  <body>
+    <h1>Login</h1>
+    <form action="/login" method="POST">
+      <input
+        type="text"
+        name="username"
+        placeholder="Username"
+        required
+      /><br />
+      <input
+        type="password"
+        name="password"
+        placeholder="Password"
+        required
+      /><br />
+      <input type="submit" value="Login" />
+    </form>
+    <p>Don't have an account? <a href="/">Register</a></p>
+
+
+    <script>
+      // Check if there's a message in the URL (query parameter)
+      const urlParams = new URLSearchParams(window.location.search);
+      const message = urlParams.get('message');
+    
+      // If a message is present, show an alert
+      if (message) {
+        alert(message);
+      }
+    </script>
+  </body>
+</html>
